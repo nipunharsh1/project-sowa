@@ -3,37 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Supplement Store</title>
+    <title>FitStore Pro – Premium Supplements</title>
+    <meta name="description" content="Shop premium fitness supplements at FitStore Pro. Top brands, best prices.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🏋️ Fitness Supplement Store</h1>
-        <div class="cart-container">
-            <span class="cart-toggle" onclick="toggleCart()">🛒 Cart: <span id="cart-count">0</span> items</span>
-            <button onclick="clearCart()">Clear Cart</button>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">💪</span>
+            <span class="nav-title">FitStore <span class="accent">Pro</span></span>
         </div>
-    </header>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">🏠 Home</a>
+            <a href="#products-container" class="nav-link">🧴 Products</a>
+            <span class="nav-user" id="nav-username"></span>
+            <span class="cart-toggle nav-cart" onclick="toggleCart()">
+                🛒 Cart <span id="cart-count" class="cart-badge">0</span>
+            </span>
+            <button class="nav-logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🏆 Premium Quality Guaranteed</div>
+            <h1 class="hero-title">Fuel Your <span class="accent">Performance</span></h1>
+            <p class="hero-subtitle">Top-rated whey proteins, isolates & plant-based proteins from the world's best brands.</p>
+            <a href="#products-container" class="hero-btn">Shop Now →</a>
+        </div>
+        <div class="hero-graphic">💪</div>
+    </section>
+
+    <!-- Products Grid -->
     <main id="products-container">
-        <!-- Products will be loaded here -->
         <p class="loading">Loading products...</p>
     </main>
-    <!-- Cart Sidebar / Modal -->
+
+    <!-- Cart Modal -->
     <div id="cart-modal" class="cart-modal">
         <div class="cart-content">
             <span class="close-cart" onclick="toggleCart()">&times;</span>
-            <h2>Your Shopping Cart</h2>
-            <div id="cart-items-container">
-                <!-- Cart items will be dynamically injected here -->
-            </div>
+            <h2>🛒 Your Cart</h2>
+            <div id="cart-items-container"></div>
             <div class="cart-summary">
                 <h3>Total: <span id="cart-total">$0.00</span></h3>
                 <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+                <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-icon">💪</span>
+                <span class="footer-title">FitStore <span class="accent">Pro</span></span>
+                <p class="footer-tagline">Premium supplements for peak performance.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products-container">Products</a></li>
+                    <li><a href="admin.html">Admin Panel</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Whey Protein</a></li>
+                    <li><a href="#">Isolates</a></li>
+                    <li><a href="#">Plant-Based</a></li>
+                    <li><a href="#">Supplements</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FitStore Pro. All rights reserved.</p>
+            <p class="footer-tech">Powered by Spring Boot &amp; Vanilla JS</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
