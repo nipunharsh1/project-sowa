@@ -1,0 +1,5 @@
+com\example\fitnessstore\entity\Product.class
+com\example\fitnessstore\service\ProductService.class
+com\example\fitnessstore\controller\ProductController.class
+com\example\fitnessstore\FitnessStoreApplication.class
+com\example\fitnessstore\repository\ProductRepository.class
